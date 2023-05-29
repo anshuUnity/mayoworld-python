@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class="main_design--container container">
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-4">
+            <div class="example_fields">
+                <div>
+                    <label for="phone">Phone</label>
+                    <input type="checkbox" name="phone" id="phone">
+                </div>
+                <div>
+                    <label for="location">Location</label>
+                    <input type="checkbox" name="location" id="location">
+                </div>
+                <div>
+                    <label for="address">Address</label>
+                    <input type="checkbox" name="address" id="address">
+                </div>
+                <div>
+                    <label for="sku">Sku</label>
+                    <input type="checkbox" name="sku" id="sku">
+                </div>
+                <div>
+                    <label for="quantity">Quantity</label>
+                    <input type="checkbox" name="quantity" id="quantity">
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-8 col-lg-8 col-md-8 drop-area" id="invoice_container" style="border: 1px solid grey;">
+            <div id="invoice__heading" class="text-end">
+                <h4>Invoice</h4>
+            </div>
+            <hr>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block javascript %}
+<script src="{% static 'js/invoice.js' %}" defer></script>
+{% endblock %}
