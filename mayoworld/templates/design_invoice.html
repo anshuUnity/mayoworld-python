@@ -1,6 +1,20 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+<style>
+    .draggableElement {
+        cursor: move;
+    }
+
+    .draggableElement.ui-draggable-dragging {
+        opacity: 0.5;
+    }
+
+    .highlight {
+        border: 2px dashed red;
+    }
+
+</style>
 <section class="main_design--container container">
     <div class="row">
         <div class="col-xl-4 col-lg-4 col-md-4">
@@ -29,7 +43,7 @@
         </div>
         <div class="col-xl-8 col-lg-8 col-md-8 drop-area" id="invoice_container" style="border: 1px solid grey;">
             <div id="invoice__heading" class="text-end">
-                <h4>Invoice</h4>
+                <h4 class="draggableElement">Invoice</h4>
             </div>
             <hr>
         </div>
